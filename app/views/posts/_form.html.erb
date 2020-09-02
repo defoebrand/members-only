@@ -12,12 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Write a new Secret Post:</h5>      
+        <span class="card-title"><%= form.text_area :body %></span>          
 
 
-  <div class="actions">
-    <%= form.submit %>
+        <div class="card-text"><%= form.submit %></div>
+        
+      </div>
+    </div>
+    
   </div>
+
 <% end %>

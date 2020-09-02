@@ -16,3 +16,19 @@
 @import 'scaffolds.scss';
 @import 'users.scss';
 @import "bootstrap";
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.form-actions .btn, .card-text input[type='submit'] {
+  background-color: #00b3ff;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+}
+
+.form-actions .btn:hover, .card-text input[type='submit']:hover {
+  opacity: 0.7;
+}
