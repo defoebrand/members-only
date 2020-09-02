@@ -27,7 +27,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
-              
+
           </ul>
           <ul class="navbar-nav">
             <% if user_signed_in? %>
@@ -44,16 +44,16 @@
               <li class="nav-item">
                 <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
               </li>
-            <% end %>        
+            <% end %>
           </ul>
       </div>
     </nav>
     <div class="container">
       <%= yield %>
     </div>
-    
 
 
-  
+
+
   </body>
 </html>

@@ -12,9 +12,9 @@
  *
 
  */
-@import 'posts.scss';
-@import 'scaffolds.scss';
-@import 'users.scss';
+// @import 'posts.scss';
+// @import 'scaffolds.scss';
+// @import 'users.scss';
 @import "bootstrap";
 
 a:hover {
@@ -22,13 +22,15 @@ a:hover {
   text-decoration: underline;
 }
 
-.form-actions .btn, .card-text input[type='submit'] {
+.card-text input[type='submit'],
+.form-actions .btn {
   background-color: #00b3ff;
   color: #fff;
   border: none;
   text-transform: capitalize;
 }
 
-.form-actions .btn:hover, .card-text input[type='submit']:hover {
+.card-text input[type='submit']:hover,
+.form-actions .btn:hover {
   opacity: 0.7;
 }

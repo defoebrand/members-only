@@ -8,15 +8,14 @@
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <% if user_signed_in? %>
-        <h5 class="card-title">@<%= post.user.username %></h5>          
+        <h5 class="card-title">@<%= post.user.username %></h5>
       <% end %>
 
       <p class="card-text"><%= post.body %></p>
       <% if user_signed_in? && post.user_id == current_user.id %>
         <%= link_to 'Edit', edit_post_path(post), class: 'card-link' %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-link' %>
-      <% end %>    
+      <% end %>
     </div>
   </div>
 <% end %>
-
