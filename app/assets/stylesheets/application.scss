@@ -10,6 +10,27 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+// @import 'posts.scss';
+// @import 'scaffolds.scss';
+// @import 'users.scss';
+@import "bootstrap";
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.card-text input[type='submit'],
+.form-actions .btn {
+  background-color: #00b3ff;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+}
+
+.card-text input[type='submit']:hover,
+.form-actions .btn:hover {
+  opacity: 0.7;
+}

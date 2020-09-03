@@ -10,6 +10,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <%= link_to "SecretPosts", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+
+          </ul>
+          <ul class="navbar-nav">
+            <%= render 'buttons' %>
+          </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+
+
+
   </body>
 </html>

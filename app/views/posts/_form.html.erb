@@ -1,0 +1,28 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Write a new Secret Post:</h5>
+        <span class="card-title"><%= form.text_area :body %></span>          
+
+
+        <div class="card-text"><%= form.submit %></div>
+
+      </div>
+    </div>
+
+  </div>
+
+<% end %>

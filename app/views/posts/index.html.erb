@@ -1,0 +1,21 @@
+<h3>Message Board</h3>
+
+<% if user_signed_in? %>
+  <%= render 'form', post: @post %>
+<% end %>
+
+<% @posts.each do |post| %>
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <% if user_signed_in? %>
+        <h5 class="card-title">@<%= post.user.username %></h5>
+      <% end %>
+
+      <p class="card-text"><%= post.body %></p>
+      <% if user_signed_in? && post.user_id == current_user.id %>
+        <%= link_to 'Edit', edit_post_path(post), class: 'card-link' %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-link' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
