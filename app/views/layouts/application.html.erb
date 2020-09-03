@@ -21,7 +21,6 @@
 
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <%= link_to "SecretPosts", root_path, class: "navbar-brand" %>
-      <%# <a class="navbar-brand" href="#">SecretPosts</a> %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,21 +29,7 @@
 
           </ul>
           <ul class="navbar-nav">
-            <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to current_user.username, edit_user_registration_path, class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
-              </li>
-            <% end %>
+            <%= render 'buttons' %>
           </ul>
       </div>
     </nav>
